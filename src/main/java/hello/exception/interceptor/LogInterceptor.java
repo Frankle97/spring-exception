@@ -14,7 +14,7 @@ public class LogInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse
-            response, Object handler) throws Exception {
+            response, Object handler)  {
         String requestURI = request.getRequestURI();
         String uuid = UUID.randomUUID().toString();
         request.setAttribute(LOG_ID, uuid);
